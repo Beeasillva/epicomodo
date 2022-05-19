@@ -18,19 +18,20 @@
 form {
     position: relative;
     margin-top: 25px;
-    padding: 25px;
-    border: 1px solid var(--gray-one);
-    width: 79%;
+    padding: 25px border: 1px solid var(--gray-one);
+    width: 58%;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
 }
-.container_input{
+
+.container_input {
     display: flex;
     margin: 8px 0;
     margin-right: auto;
 }
-.container_input label{
+
+.container_input label {
     height: 38px;
     display: flex;
     align-items: center;
@@ -39,14 +40,16 @@ form {
     color: #fff;
     padding: 0 15px;
     border-radius: 5px 0 0 5px;
-    width: 203px;
+    width: 120px;
 }
-.container_input input{
+
+.container_input input {
     height: 38px;
     padding: 0 8px;
     border-radius: 0 5px 5px 0;
     border: 1px solid var(--gray-one);
 }
+
 .container_input span {
     display: flex;
     width: 30px;
@@ -57,10 +60,12 @@ form {
     border-radius: 5px;
     margin-left: 5px;
 }
-#textParede{
+
+#textParede {
     position: absolute;
     top: -40px;
 }
+
 #formButton {
     position: absolute;
     bottom: -65px;
@@ -72,4 +77,45 @@ form {
     border-radius: 5px;
     text-transform: uppercase;
     font-weight: 700;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+
+}
+
+#formButton:hover {
+    background-color: var(--blue-one);
+}
+
+@media (max-width: 1220px) {
+    .formApp {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1034px) {
+    .formApp {
+        flex-direction: column;
+        width: auto;
+    }
+
+    #formButton {
+        width: 100%;
+    }
+}
+
+@media (max-width: 908px) {
+    .formTitle {
+        width: 50%;
+    }
+}
+
+@media (max-width: 409px) {
+    .formTitle {
+        padding: 5% 2%;
+        width: 97%
+    }
+
+    .container_input>input {
+        width: 50%;
+    }
 }
